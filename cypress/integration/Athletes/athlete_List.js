@@ -1,5 +1,5 @@
 /// <reference types="Cypress"/>
-import * as variables from "../../fixtures/variables";
+import * as variables from "../../fixtures/constants";
 
 describe("Pruebas para seccion ATHLETE LIST", function() {
   beforeEach(function() {

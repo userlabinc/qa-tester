@@ -1,23 +1,17 @@
 /// <reference types="Cypress"/>
-import * as variables from "../../fixtures/variables";
+import * as variables from "../../fixtures/constants";
 
-describe("Pruebas para seccion ATHLETE ADD", function() {
-  beforeEach(function() {
+describe("Pruebas para seccion ATHLETE ADD", () => {
+  beforeEach(() => {
     cy.fixture("data-moocho").then(function(datos) {
       this.datos = datos;
     });
+    cy.login();
   });
 
-  beforeEach(() => {
-    cy.visit("http://admin-qa.moocho.com/");
-    cy.reload();
-  });
   //
   // USER ID
   it("Add athlete by user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -31,9 +25,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add athlete by user id without campus", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -49,9 +40,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add athlete by user id without user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -65,9 +53,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add athlete by user id without campus and user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -83,9 +68,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("CANCEL add athlete by user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -102,9 +84,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add restricted UNTIL athlete by user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -121,9 +100,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("CANCEL add restricted UNTIL athlete by user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -144,9 +120,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add restricted AFTER athlete by user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -163,9 +136,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("CANCEL add restricted AFTER athlete by user id", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -187,9 +157,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   //
   // EMAIL
   it("Add athlete by email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -203,9 +170,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add athlete by email without campus", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -221,9 +185,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add athlete by email without email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -240,9 +201,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add athlete by email without campus and email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -261,9 +219,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("CANCEL add athlete by email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -277,9 +232,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add restricted UNTIL athlete by email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -296,9 +248,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("CANCEL add restricted UNTIL athlete by email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -319,9 +268,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("Add restricted AFTER athlete by email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)
@@ -338,9 +284,6 @@ describe("Pruebas para seccion ATHLETE ADD", function() {
   });
 
   it("CANCEL add restricted AFTER athlete by email", function() {
-    cy.get(variables.user).type(this.datos.correo);
-    cy.get(variables.pass).type(this.datos.pass);
-    cy.get(variables.loginbtn).click();
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
     cy.get(variables.athlete_btn).click();
     cy.get(variables.ath_add)

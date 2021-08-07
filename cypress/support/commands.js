@@ -24,44 +24,16 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 // support/commands.js
-const COMMAND_DELAY = 500;
 
-for (const command of [
-  "visit",
-  "click",
-  "trigger",
-  "type",
-  "clear",
-  "reload",
-  "contains",
-]) {
-  Cypress.Commands.overwrite(command, (originalFn, ...args) => {
-    const origVal = originalFn(...args);
+Cypress.Commands.add("login", () => {
+  cy.visit("https://admin-qa.moocho.com/");
+  cy.get("#username").type("jose.gonzalez@userlab.co");
+  cy.get("#password").type("KHlm996@@ap");
+  cy.get(".login-form-button").click();
+});
 
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(origVal);
-      }, COMMAND_DELAY);
-    });
-  });
-}
-
-// Script para ejecutar mochawesome y cypress al mismo tiempo
-/*const cypress = require("cypress");
-const marge = require("mochawesome-report-generator");
-const { merge } = require("mochawesome-merge");
-
-cypress.run().then(
-  () => {
-    generateReport();
-  },
-  (error) => {
-    generateReport();
-    console.error(error);
-    process.exit(1);
-  }
-);
-
-function generateReport(options) {
-  return merge(options).then((report) => marge.create(report, options));
-}*/
+//AthleteFirstLevel
+Cypress.Commands.add("AthleteFirstLevel", () => {
+  cy.get(".ant-layout-sider-children", { timeout: 8000 }).should("be.visible");
+  cy.get(".ant-menu-dark > :nth-child(3) > .ant-menu-submenu-title").click();
+});
