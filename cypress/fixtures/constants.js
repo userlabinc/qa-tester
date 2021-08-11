@@ -49,37 +49,42 @@ const delete_btn =
   "[data-row-key='0'] > :nth-child(5) > :nth-child(1) > :nth-child(7)";
 const athlete_btn =
   ".ant-layout-sider-children > .ant-menu > :nth-child(3) > .ant-menu-submenu-title";
-const athleteAdd = "[id='menu2$Menu'] :nth-child(1) > a";
-const ath_add_bd = ".ant-card-body";
-const by_user = "#addBy > :nth-child(1)";
-const by_email = "#addBy > :nth-child(2)";
-const ath_campus = ".ant-select-selection";
-const ath_campus_select = ".ant-select-dropdown-menu > :nth-child(5)";
-const cancelButton = "[type='button']";
-const addButton = ".ant-btn-primary";
-const restrictedUntil = "#restrictedUntil > div > .ant-calendar-picker-input";
-const date_in = ".ant-calendar-input";
-const restrictedAfter = "#restrictedAfter > div > .ant-calendar-picker-input";
-const popup_yes = ".ant-popover-buttons > .ant-btn-primary";
-const general_er = ".ant-form-explain";
-const campus_er =
+// ATHLETE ADD
+const menuAthleteAdd = "[id='menu2$Menu'] :nth-child(1) > a";
+const AAbody = ".ant-card-body";
+const AAuser = ".ant-input";
+const AAemail = ".ant-input";
+const AAaddByUser = "#addBy > :nth-child(1)";
+const AAaddByEmail = "#addBy > :nth-child(2)";
+const AAcampus = ".ant-select-selection";
+const AAcampusSelect = ".ant-select-dropdown-menu > :nth-child(5)"; // Cambiar valor de ntchild dependiendo de la opcion
+const AAcancelButton = "[type='button']";
+const AAaddButton = ".ant-btn-primary";
+const AArestrictedUntil = "#restrictedUntil > div > .ant-calendar-picker-input";
+const AAdateInput = ".ant-calendar-input";
+const AArestrictedAfter = "#restrictedAfter > div > .ant-calendar-picker-input";
+const AAcalendarYes = ".ant-popover-buttons > .ant-btn-primary";
+const ErrorGeneral = ".ant-form-explain";
+const AAerrorCampus =
   ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
-const user_er =
+const AAerrorUser =
   ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
-const email_er =
+const AAerrorEmail =
   ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
-const isRestricted = ".ant-checkbox-inner";
+const AAisRestricted = ".ant-checkbox-inner";
+const AAaddBySelected = ".ant-radio-button-wrapper-checked";
+// ATHLETE BATCH
 const ABDownload =
   ".ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-btn";
 const ABCampus =
   ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
 const ABTeam =
   ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
-const batchType1 = "#type > :nth-child(1)";
-const batchType2 = "#type > :nth-child(2)";
-const batchType3 = "#type > :nth-child(3)";
-const batchType4 = "#type > :nth-child(4)";
-const batchType5 = "#type > :nth-child(5)";
+const ABbatchType1 = "#type > :nth-child(1)";
+const ABbatchType2 = "#type > :nth-child(2)";
+const ABbatchType3 = "#type > :nth-child(3)";
+const ABbatchType4 = "#type > :nth-child(4)";
+const ABbatchType5 = "#type > :nth-child(5)";
 const ABUpload = ".ant-upload > .ant-btn";
 const ABCancel =
   ".ant-col-24 > .ant-row > .ant-col > .ant-form-item-control > .ant-form-item-children > [type='button']";
@@ -97,6 +102,7 @@ const ALotherOptions = ".ant-input-wrapper > .ant-input";
 const ALview = "[data-row-key='0'] > :nth-child(8) > div > :nth-child(1)";
 const ALedit = "[data-row-key='0'] > :nth-child(8) > div > :nth-child(2)";
 const ALdelete = "[data-row-key='0'] > :nth-child(8) > div > :nth-child(3)";
+// TEAM ADD
 const menuTeamAdd = ":nth-child(4) > a";
 const TAname = "#name";
 const TAaddTag = ".ant-btn-primary";
@@ -115,6 +121,7 @@ const CGAcampus = ".ant-select-selection";
 const CGAname = "#name";
 const CGAcancel = "[type='button']";
 const CGAaddTeam = ".ant-btn-primary";
+// CREDIT GROUPS LIST
 const menuCreditGroupsList = ":nth-child(7) > a";
 const CGLname = ".ant-input";
 const CGLcampus = ".ant-select-selection";
@@ -427,19 +434,14 @@ export {
   ABCancel,
   ABaddAthlete,
   ABUpload,
-  batchType1,
-  batchType2,
-  batchType3,
-  batchType4,
-  batchType5,
+  ABbatchType1,
+  ABbatchType2,
+  ABbatchType3,
+  ABbatchType4,
+  ABbatchType5,
   ABTeam,
   ABCampus,
   ABDownload,
-  isRestricted,
-  general_er,
-  campus_er,
-  user_er,
-  email_er,
   user,
   pass,
   loginbtn,
@@ -473,16 +475,24 @@ export {
   edit,
   delete_btn,
   athlete_btn,
-  athleteAdd,
-  ath_add_bd,
-  by_user,
-  by_email,
-  ath_campus,
-  ath_campus_select,
-  cancelButton,
-  addButton,
-  restrictedUntil,
-  restrictedAfter,
-  date_in,
-  popup_yes,
+  menuAthleteAdd,
+  AAbody,
+  AAemail,
+  AAuser,
+  AAaddByUser,
+  AAaddBySelected,
+  AAaddByEmail,
+  AAcampus,
+  AAcampusSelect,
+  AAcancelButton,
+  AAaddButton,
+  AArestrictedUntil,
+  AAdateInput,
+  AArestrictedAfter,
+  AAcalendarYes,
+  ErrorGeneral,
+  AAerrorCampus,
+  AAerrorUser,
+  AAerrorEmail,
+  AAisRestricted,
 };

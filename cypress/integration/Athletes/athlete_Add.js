@@ -13,7 +13,7 @@ describe("Pruebas para seccion ATHLETE ADD", () => {
   // USER ID
   it("Add athlete by user id", function() {
     cy.get(variables.menu_prin, { timeout: 8000 }).should("be.visible");
-    cy.get(variables.athlete_btn).click();
+    cy.get(variables.menuAthleteAdd).click();
     cy.get(variables.ath_add)
       .should("be.visible")
       .click();

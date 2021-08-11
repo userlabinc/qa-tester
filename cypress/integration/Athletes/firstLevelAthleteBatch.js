@@ -38,58 +38,58 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.isRestricted).should("be.visible");
+    cy.get(variables.ABisRestricted).should("be.visible");
   });
 
   it("Prueba Restricted Until", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.isRestricted).click({ force: true });
-    cy.get(variables.restrictedUntil).should("be.visible");
+    cy.get(variables.ABisRestricted).click({ force: true });
+    cy.get(variables.ABrestrictedUntil).should("be.visible");
   });
 
   it("Prueba Restricted After", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.isRestricted).click({ force: true });
-    cy.get(variables.restrictedAfter).should("be.visible");
+    cy.get(variables.ABisRestricted).click({ force: true });
+    cy.get(variables.ABrestrictedAfter).should("be.visible");
   });
 
   it("Prueba Batch Type 1", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.batchType1).should("be.visible");
+    cy.get(variables.ABbatchType1).should("be.visible");
   });
 
   it("Prueba Batch Type 2", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.batchType2).should("be.visible");
+    cy.get(variables.ABbatchType2).should("be.visible");
   });
 
   it("Prueba Batch Type 3", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.batchType3).should("be.visible");
+    cy.get(variables.ABbatchType3).should("be.visible");
   });
 
   it("Prueba Batch Type 4", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.batchType4).should("be.visible");
+    cy.get(variables.ABbatchType4).should("be.visible");
   });
 
   it("Prueba Batch Type 5", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.batchType5).should("be.visible");
+    cy.get(variables.ABbatchType5).should("be.visible");
   });
 
   it("Prueba Warning", function() {
