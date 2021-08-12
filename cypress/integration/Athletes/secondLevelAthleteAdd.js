@@ -34,7 +34,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.AAuser)
       .type(this.datos.testNumeros)
-      .should("have.text", "123456");
+      .should("have.value", 123456);
   });
 
   it("Prueba User ID > Texto", function() {
@@ -43,7 +43,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.AAuser)
       .type(this.datos.testLetras)
-      .should("have.text", "Test");
+      .should("have.text", "");
   });
 
   it("Prueba User ID > Simbolos", function() {
@@ -61,7 +61,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.AAuser)
       .type(this.datos.testAlfanumerico)
-      .should("have.text", "A11");
+      .should("have.text", "");
   });
 
   it("Prueba User ID > Mensaje de error", function() {
@@ -79,7 +79,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.AAaddByEmail).click();
     cy.get(variables.AAemail)
       .type(this.datos.testNumeros)
-      .should("have.text", "123456");
+      .should("have.value", "123456");
   });
 
   it("Prueba Email > Texto", function() {
@@ -89,7 +89,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.AAaddByEmail).click();
     cy.get(variables.AAemail)
       .type(this.datos.testLetras)
-      .should("have.text", "Test");
+      .should("have.value", "Test");
   });
 
   it("Prueba Email > Simbolos", function() {
@@ -99,7 +99,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.AAaddByEmail).click();
     cy.get(variables.AAemail)
       .type(this.datos.testSimbolos)
-      .should("have.text", "");
+      .should("have.value", "$#@");
   });
 
   it("Prueba Email > Alfanumerico", function() {
@@ -109,7 +109,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.AAaddByEmail).click();
     cy.get(variables.AAemail)
       .type(this.datos.testAlfanumerico)
-      .should("have.text", "A11");
+      .should("have.value", "A11");
   });
 
   it("Prueba Email > Mensaje de error", function() {
