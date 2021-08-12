@@ -53,7 +53,11 @@ const athlete_btn =
 const menuAthleteAdd = "[id='menu2$Menu'] :nth-child(1) > a";
 const AAbody = ".ant-card-body";
 const AAuser = ".ant-input";
+const AAuserErrorMsg =
+  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const AAemail = ".ant-input";
+const AAemailErrorMsg =
+  ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const AAaddByUser = "#addBy > :nth-child(1)";
 const AAaddByEmail = "#addBy > :nth-child(2)";
 const AAcampus = ".ant-select-selection";
