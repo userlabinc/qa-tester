@@ -20,8 +20,8 @@
   "testNameError" : "0123456",
   "testEmailError" : "tes!t@test.com",
   "testPassError" : "pass",
-  "testLetras" : "Test",
-  "testNumeros" : "123456",
-  "testAlfanumerico" : "A11",
-  "testSimbolos" : "$#@"
+  "testLetras" : "Test{enter}",
+  "testNumeros" : "123456{enter}",
+  "testAlfanumerico" : "A11{enter}",
+  "testSimbolos" : "$#@{enter}"
 }
