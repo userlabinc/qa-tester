@@ -56,8 +56,12 @@ const AAuser = ".ant-input";
 const AAuserErrorMsg =
   ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const AAemail = ".ant-input";
-const AAemailErrorMsg =
+const AAcampusErrorMsg =
   ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
+const AAcreditGroup =
+  ":nth-child(4) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
+const AArulesToApply =
+  ":nth-child(5) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
 const AAaddByUser = "#addBy > :nth-child(1)";
 const AAaddByEmail = "#addBy > :nth-child(2)";
 const AAcampus = ".ant-select-selection";
@@ -499,4 +503,8 @@ export {
   AAerrorUser,
   AAerrorEmail,
   AAisRestricted,
+  AAuserErrorMsg,
+  AAcampusErrorMsg,
+  AAcreditGroup,
+  AArulesToApply,
 };
