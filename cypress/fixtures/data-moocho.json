@@ -23,5 +23,7 @@
   "testLetras" : "Test{enter}",
   "testNumeros" : "123456{enter}",
   "testAlfanumerico" : "A11{enter}",
-  "testSimbolos" : "$#@{enter}"
+  "testSimbolos" : "$#@{enter}",
+  "untilDate" : "08/25/2021",
+  "testDate" : "25/08/2021"
 }

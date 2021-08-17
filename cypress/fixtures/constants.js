@@ -88,6 +88,10 @@ const ABCampus =
   ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
 const ABTeam =
   ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
+const ABisRestricted = ".ant-checkbox-inner";
+const ABrestrictedUntil = "#restrictedUntil > div > .ant-calendar-picker-input";
+const ABdateInput = ".ant-calendar-input";
+const ABrestrictedAfter = "#restrictedAfter > div > .ant-calendar-picker-input";
 const ABbatchType1 = "#type > :nth-child(1)";
 const ABbatchType2 = "#type > :nth-child(2)";
 const ABbatchType3 = "#type > :nth-child(3)";
@@ -507,4 +511,8 @@ export {
   AAcampusErrorMsg,
   AAcreditGroup,
   AArulesToApply,
+  ABisRestricted,
+  ABrestrictedUntil,
+  ABdateInput,
+  ABrestrictedAfter,
 };

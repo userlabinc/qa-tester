@@ -213,33 +213,178 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.AAisRestricted).should("be.visible");
   });
 
-  it("Prueba Restricted Until", function() {
+  it("Prueba Restricted Until > Fecha correcta m/d/y", function() {
     cy.get(variables.menuAthleteAdd)
       .should("be.visible")
       .click();
     cy.get(variables.AAisRestricted).click({ force: true });
     cy.get(variables.AArestrictedUntil).should("be.visible");
+    cy.get(variables.AArestrictedUntil).click();
+    cy.get(variables.AAdateInput).type(this.datos.untilDate, { force: true });
   });
 
-  it("Prueba Restricted After", function() {
+  it("Prueba Restricted Until > Fecha con formato d/m/y", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedUntil).should("be.visible");
+    cy.get(variables.AArestrictedUntil).click();
+    cy.get(variables.AAdateInput).type(this.datos.testDate, { force: true });
+  });
+
+  it("Prueba Restricted Until > Text", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedUntil).should("be.visible");
+    cy.get(variables.AArestrictedUntil).click();
+    cy.get(variables.AAdateInput).type(this.datos.testLetras, { force: true });
+  });
+
+  it("Prueba Restricted Until > Numeros", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedUntil).should("be.visible");
+    cy.get(variables.AArestrictedUntil).click();
+    cy.get(variables.AAdateInput).type(this.datos.testNumeros, { force: true });
+  });
+
+  it("Prueba Restricted Until > Simbolos", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedUntil).should("be.visible");
+    cy.get(variables.AArestrictedUntil).click();
+    cy.get(variables.AAdateInput).type(this.datos.testSimbolos, {
+      force: true,
+    });
+  });
+
+  it("Prueba Restricted Until > Alfanumerico", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedUntil).should("be.visible");
+    cy.get(variables.AArestrictedUntil).click();
+    cy.get(variables.AAdateInput).type(this.datos.testAlfanumerico, {
+      force: true,
+    });
+  });
+
+  it("Prueba Restricted Until > Mensaje de Error", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedUntil).should("be.visible");
+    cy.get(variables.AAaddButton).click();
+  });
+
+  it("Prueba Restricted After > Fecha correcta m/d/y", function() {
     cy.get(variables.menuAthleteAdd)
       .should("be.visible")
       .click();
     cy.get(variables.AAisRestricted).click({ force: true });
     cy.get(variables.AArestrictedAfter).should("be.visible");
+    cy.get(variables.AArestrictedAfter).click();
+    cy.get(variables.AAdateInput).type(this.datos.untilDate, { force: true });
   });
 
-  it("Prueba boton Add Athlete", function() {
+  it("Prueba Restricted After > Fecha con formato d/m/y", function() {
     cy.get(variables.menuAthleteAdd)
       .should("be.visible")
       .click();
-    cy.get(variables.AAaddButton).should("be.visible");
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedAfter).should("be.visible");
+    cy.get(variables.AArestrictedAfter).click();
+    cy.get(variables.AAdateInput).type(this.datos.testDate, { force: true });
   });
 
-  it("Prueba boton Cancel", function() {
+  it("Prueba Restricted After > Text", function() {
     cy.get(variables.menuAthleteAdd)
       .should("be.visible")
       .click();
-    cy.get(variables.AAcancelButton).should("be.visible");
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedAfter).should("be.visible");
+    cy.get(variables.AArestrictedAfter).click();
+    cy.get(variables.AAdateInput).type(this.datos.testLetras, { force: true });
+  });
+
+  it("Prueba Restricted After > Numeros", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedAfter).should("be.visible");
+    cy.get(variables.AArestrictedAfter).click();
+    cy.get(variables.AAdateInput).type(this.datos.testNumeros, { force: true });
+  });
+
+  it("Prueba Restricted After > Simbolos", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedAfter).should("be.visible");
+    cy.get(variables.AArestrictedAfter).click();
+    cy.get(variables.AAdateInput).type(this.datos.testSimbolos, {
+      force: true,
+    });
+  });
+
+  it("Prueba Restricted After > Alfanumerico", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedAfter).should("be.visible");
+    cy.get(variables.AArestrictedAfter).click();
+    cy.get(variables.AAdateInput).type(this.datos.testAlfanumerico, {
+      force: true,
+    });
+  });
+
+  it("Prueba Restricted After > Mensaje de Error", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAisRestricted).click({ force: true });
+    cy.get(variables.AArestrictedAfter).should("be.visible");
+    cy.get(variables.AAaddButton).click();
+  });
+
+  it("Prueba boton Add Athlete > Muestra mensajes de error", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAaddButton).click();
+    cy.get(variables.AAuserErrorMsg).should(
+      "have.text",
+      "Please input the user id!"
+    );
+  });
+
+  it("Prueba boton Add Athlete > Muestra mensajes de confirmacion", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAuser).type(this.datos.testLetras);
+    cy.get(variables.AAcampus).type(this.datos.testLetras);
+    //cy.get(variables.AAaddButton).click();
+  });
+
+  it("Prueba boton Cancel > Limpia o deja la informacion", function() {
+    cy.get(variables.menuAthleteAdd)
+      .should("be.visible")
+      .click();
+    cy.get(variables.AAuser).type(this.datos.testLetras);
+    cy.get(variables.AAcampus).type(this.datos.testLetras);
+    cy.get(variables.AAcancelButton).click();
   });
 }); // fin describe
