@@ -82,12 +82,22 @@ const AAerrorEmail =
 const AAisRestricted = ".ant-checkbox-inner";
 const AAaddBySelected = ".ant-radio-button-wrapper-checked";
 // ATHLETE BATCH
+const ABpath = "/Users/userlab/Downloads";
+const ABbody = ".ant-card-body";
 const ABDownload =
   ".ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-btn";
 const ABCampus =
   ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
+const ABCampusErrorMsg =
+  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const ABTeam =
   ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
+const ABcreditGroupErrorMsg =
+  ":nth-child(4) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
+const ABisRestricted = ".ant-checkbox-inner";
+const ABrestrictedUntil = "#restrictedUntil > div > .ant-calendar-picker-input";
+const ABdateInput = ".ant-calendar-input";
+const ABrestrictedAfter = "#restrictedAfter > div > .ant-calendar-picker-input";
 const ABbatchType1 = "#type > :nth-child(1)";
 const ABbatchType2 = "#type > :nth-child(2)";
 const ABbatchType3 = "#type > :nth-child(3)";
@@ -96,6 +106,7 @@ const ABbatchType5 = "#type > :nth-child(5)";
 const ABUpload = ".ant-upload > .ant-btn";
 const ABCancel =
   ".ant-col-24 > .ant-row > .ant-col > .ant-form-item-control > .ant-form-item-children > [type='button']";
+const ABcancelYes = ".ant-popover-buttons > .ant-btn-primary";
 const ABaddAthlete = ".ant-btn-primary";
 const ABwarningMsg =
   ":nth-child(6) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-row > .ant-col > div";
@@ -507,4 +518,13 @@ export {
   AAcampusErrorMsg,
   AAcreditGroup,
   AArulesToApply,
+  ABisRestricted,
+  ABrestrictedUntil,
+  ABrestrictedAfter,
+  ABdateInput,
+  ABCampusErrorMsg,
+  ABbody,
+  ABcreditGroupErrorMsg,
+  ABcancelYes,
+  ABpath,
 };
