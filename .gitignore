@@ -6,3 +6,4 @@ jspm_packages/
 .DS_Store
 cypress/reports
 cypress/screenshots
+cypress/downloads
