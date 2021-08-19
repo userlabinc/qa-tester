@@ -54,7 +54,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.ABCampus).type(this.datos.testNumeros);
-    //cy.get(variables.ABbody).click();
+    cy.get(variables.ABbody).click();
     cy.get(variables.ABCampus).should("have.value", "");
   });
 
@@ -63,7 +63,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.ABCampus).type(this.datos.testSimbolos);
-    //cy.get(variables.ABbody).click();
+    cy.get(variables.ABbody).click();
     cy.get(variables.ABCampus).should("have.value", "");
   });
 
@@ -72,7 +72,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.ABCampus).type(this.datos.testAlfanumerico);
-    //cy.get(variables.ABbody).click();
+    cy.get(variables.ABbody).click();
     cy.get(variables.ABCampus).should("have.value", "");
   });
 
@@ -299,6 +299,63 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.ABaddAthlete).click();
   });
 
+  it("Prueba Batch Type > Cambia de color", function() {
+    cy.get(variables.menuAthleteBatch)
+      .should("be.visible")
+      .click();
+    cy.get(variables.ABbatchType1).click();
+    cy.get(variables.ABbatchTypeSelect).should("be.visible");
+    cy.get(variables.ABbatchType2).click();
+    cy.get(variables.ABbatchTypeSelect).should("be.visible");
+    cy.get(variables.ABbatchType3).click();
+    cy.get(variables.ABbatchTypeSelect).should("be.visible");
+    cy.get(variables.ABbatchType4).click();
+    cy.get(variables.ABbatchTypeSelect).should("be.visible");
+    cy.get(variables.ABbatchType5).click();
+    cy.get(variables.ABbatchTypeSelect).should("be.visible");
+  });
+
+  it("Prueba Batch Type > Cambia mensaje WARNING", function() {
+    cy.get(variables.menuAthleteBatch)
+      .should("be.visible")
+      .click();
+    cy.get(variables.ABbatchType1).click();
+    cy.get(variables.ABbatchTypeMsg).should(
+      "have.text",
+      this.datos.ABbatchType1Msg
+    );
+    cy.get(variables.ABbatchType2).click();
+    cy.get(variables.ABbatchTypeMsg).should(
+      "have.text",
+      this.datos.ABbatchType2Msg
+    );
+    cy.get(variables.ABbatchType3).click();
+    cy.get(variables.ABbatchTypeMsg).should(
+      "have.text",
+      this.datos.ABbatchType3Msg
+    );
+    cy.get(variables.ABbatchType4).click();
+    cy.get(variables.ABbatchTypeMsg).should(
+      "have.text",
+      this.datos.ABbatchType4Msg
+    );
+    cy.get(variables.ABbatchType5).click();
+    cy.get(variables.ABbatchTypeMsg).should(
+      "have.text",
+      this.datos.ABbatchType5Msg
+    );
+  });
+
+  it("Prueba boton File", function() {
+    cy.get(variables.menuAthleteBatch)
+      .should("be.visible")
+      .click();
+    const filepath = "files/fileForAthletes.xlsx";
+    cy.get(variables.ABUpload)
+      .attachFile(filepath)
+      .click();
+  });
+
   it("Prueba boton Add Athlete > Muestra mensajes de error", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
@@ -308,6 +365,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       "have.text",
       "Please select the campus!"
     );
+    cy.get(variables.ABUploadMsg).should("have.text", "Please select a file!");
   });
 
   it("Prueba boton Add Athlete > Muestra mensajes de confirmacion", function() {
@@ -317,6 +375,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.ABTeam).type(this.datos.testLetras);
     cy.get(variables.ABCampus).type(this.datos.testLetras);
     //cy.get(variables.ABaddAthlete).click();
+    // No se puede terminar por falta de informacion
   });
 
   it("Prueba boton Cancel > Limpia o deja la informacion", function() {

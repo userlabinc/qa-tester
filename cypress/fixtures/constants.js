@@ -103,7 +103,12 @@ const ABbatchType2 = "#type > :nth-child(2)";
 const ABbatchType3 = "#type > :nth-child(3)";
 const ABbatchType4 = "#type > :nth-child(4)";
 const ABbatchType5 = "#type > :nth-child(5)";
+const ABbatchTypeMsg =
+  ":nth-child(6) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-row > .ant-col > div";
+const ABbatchTypeSelect = ".ant-radio-button-wrapper-checked";
 const ABUpload = ".ant-upload > .ant-btn";
+const ABUploadMsg =
+  ":nth-child(7) > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain";
 const ABCancel =
   ".ant-col-24 > .ant-row > .ant-col > .ant-form-item-control > .ant-form-item-children > [type='button']";
 const ABcancelYes = ".ant-popover-buttons > .ant-btn-primary";
@@ -118,30 +123,43 @@ const ALcampus =
 const ALteam =
   ":nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
 const ALotherOptions = ".ant-input-wrapper > .ant-input";
+const ALbody = ".ant-card-body";
 const ALview = "[data-row-key='0'] > :nth-child(8) > div > :nth-child(1)";
 const ALedit = "[data-row-key='0'] > :nth-child(8) > div > :nth-child(2)";
+const ALeditDrawer = ".ant-drawer-body";
+const ALeditDrawerBtn = ".ant-btn-primary";
+const ALeditDrawerMsg = ".ant-message-notice-content";
 const ALdelete = "[data-row-key='0'] > :nth-child(8) > div > :nth-child(3)";
+const ALpageNumberGroup = ".ant-pagination";
+const ALpageNext = ".ant-pagination-next > .ant-pagination-item-link";
+const ALpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 // TEAM ADD
-const menuTeamAdd = ":nth-child(4) > a";
+const menuTeamAdd = ":nth-child(5) > a";
 const TAname = "#name";
+const TAnameMsg = ".ant-form-explain";
 const TAaddTag = ".ant-btn-primary";
 const TAcancel = "[type='button']";
+const TAcancelYes = ".ant-popover-buttons > .ant-btn-primary";
+const TAcancelNo = ".ant-popover-buttons > :nth-child(1)";
 // TEAMS LIST
-const menuTeamsList = ":nth-child(5) > a";
+const menuTeamsList = ":nth-child(6) > a";
 const TLname = ".ant-input";
 const TLedit =
   "[data-row-key='0'] > :nth-child(4) > :nth-child(1) > :nth-child(1)";
+const TLeditDrawer = "";
+const TLeditDrawerBtn = "";
+const TLeditDrawerMsg = "";
 const TLdelete =
   "[data-row-key='0'] > :nth-child(4) > :nth-child(1) > :nth-child(3)";
 const TLpageNumberGroup = ".ant-pagination";
 // CREDIT GROUP ADD
-const menuCreditGroupAdd = ":nth-child(6) > a";
+const menuCreditGroupAdd = ":nth-child(7) > a";
 const CGAcampus = ".ant-select-selection";
 const CGAname = "#name";
 const CGAcancel = "[type='button']";
 const CGAaddTeam = ".ant-btn-primary";
 // CREDIT GROUPS LIST
-const menuCreditGroupsList = ":nth-child(7) > a";
+const menuCreditGroupsList = ":nth-child(8) > a";
 const CGLname = ".ant-input";
 const CGLcampus = ".ant-select-selection";
 const CGLview =
@@ -154,7 +172,7 @@ const CGLdownload =
   "[data-row-key='0'] > :nth-child(3) > :nth-child(1) > :nth-child(7)";
 const CGLpageNumberGroup = ".ant-pagination";
 // CREDIT RULE ADD
-const menuCreditRuleAdd = ":nth-child(8) > a";
+const menuCreditRuleAdd = ":nth-child(9) > a";
 const CRAname = "#name";
 const CRAcampus =
   ":nth-child(3) > .ant-col-18 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
@@ -271,7 +289,7 @@ const CRAforEntirePeriodMealCreditUsed =
 const CRAcancel = ".ant-form-item-children > [type='button']";
 const CRAaddCreditRule = ".ant-btn-primary";
 // CREDIT RULES LIST
-const menuCreditRulesList = ":nth-child(9) > a";
+const menuCreditRulesList = ":nth-child(10) > a";
 const CRLname = ".ant-input";
 const CRLcampus = ".ant-select-selection";
 const CRLidTable =
@@ -296,7 +314,7 @@ const CRLactivate =
   "[data-row-key='0'] > :nth-child(7) > :nth-child(1) > :nth-child(7)";
 const CRLpageNumberGroup = ".ant-pagination";
 // RECEIPTS
-const menuReceipts = "[id='menu2$Menu'] > :nth-child(10) > a";
+const menuReceipts = "[id='menu2$Menu'] > :nth-child(11) > a";
 const RsearchByUser = "#searchBy > :nth-child(1)";
 const RsearchByEmail = "#searchBy > :nth-child(2)";
 const RuserID =
@@ -435,15 +453,28 @@ export {
   menuTeamsList,
   TLname,
   TLedit,
+  TLeditDrawer,
+  TLeditDrawerBtn,
+  TLeditDrawerMsg,
   TLdelete,
   TLpageNumberGroup,
   menuTeamAdd,
   TAname,
+  TAnameMsg,
   TAaddTag,
   TAcancel,
+  TAcancelYes,
+  TAcancelNo,
   ALview,
   ALedit,
   ALdelete,
+  ALbody,
+  ALpageNumberGroup,
+  ALpageNext,
+  ALpagePrevious,
+  ALeditDrawer,
+  ALeditDrawerBtn,
+  ALeditDrawerMsg,
   menuAthleteList,
   ALuser,
   ALcampus,
@@ -527,4 +558,7 @@ export {
   ABcreditGroupErrorMsg,
   ABcancelYes,
   ABpath,
+  ABbatchTypeSelect,
+  ABbatchTypeMsg,
+  ABUploadMsg,
 };

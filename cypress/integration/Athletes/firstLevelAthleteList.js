@@ -61,4 +61,11 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.ALdelete).should("be.visible");
   });
+
+  it("Prueba Page Number", function() {
+    cy.get(variables.menuAthleteList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.ALpageNumberGroup).should("be.visible");
+  });
 }); // fin describe
