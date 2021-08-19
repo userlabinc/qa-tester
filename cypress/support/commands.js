@@ -25,6 +25,9 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 // support/commands.js
 
+import "cypress-file-upload";
+import "cypress-real-events/support";
+
 Cypress.Commands.add("login", () => {
   cy.visit("https://admin-qa.moocho.com/");
   cy.get("#username").type("jose.gonzalez@userlab.co");
