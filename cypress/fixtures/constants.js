@@ -134,7 +134,7 @@ const ALpageNumberGroup = ".ant-pagination";
 const ALpageNext = ".ant-pagination-next > .ant-pagination-item-link";
 const ALpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 // TEAM ADD
-const menuTeamAdd = ":nth-child(5) > a";
+const menuTeamAdd = ":nth-child(6) > a";
 const TAname = "#name";
 const TAnameMsg = ".ant-form-explain";
 const TAaddTag = ".ant-btn-primary";
@@ -142,7 +142,7 @@ const TAcancel = "[type='button']";
 const TAcancelYes = ".ant-popover-buttons > .ant-btn-primary";
 const TAcancelNo = ".ant-popover-buttons > :nth-child(1)";
 // TEAMS LIST
-const menuTeamsList = ":nth-child(6) > a";
+const menuTeamsList = ":nth-child(7) > a";
 const TLname = ".ant-input";
 const TLedit =
   "[data-row-key='0'] > :nth-child(4) > :nth-child(1) > :nth-child(1)";
@@ -151,28 +151,54 @@ const TLeditDrawerBtn = "";
 const TLeditDrawerMsg = "";
 const TLdelete =
   "[data-row-key='0'] > :nth-child(4) > :nth-child(1) > :nth-child(3)";
+const TLdeleteYes = ".ant-btn-primary";
+const TLdeleteNo = ".ant-popover-buttons > :nth-child(1)";
 const TLpageNumberGroup = ".ant-pagination";
+const TLpageNext = ".ant-pagination-next > .ant-pagination-item-link";
+const TLpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 // CREDIT GROUP ADD
-const menuCreditGroupAdd = ":nth-child(7) > a";
+const menuCreditGroupAdd = ":nth-child(8) > a";
+const CGAbody = ".ant-card-body";
 const CGAcampus = ".ant-select-selection";
+const CGAcampusMsg =
+  ":nth-child(1) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const CGAname = "#name";
+const CGAnameMsg =
+  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const CGAcancel = "[type='button']";
+const CGAcancelYes = ".ant-popover-buttons > .ant-btn-primary";
+const CGAcancelNo = ".ant-popover-buttons > :nth-child(1)";
 const CGAaddTeam = ".ant-btn-primary";
+const CGAconfirmation = ".ant-message-notice-content";
 // CREDIT GROUPS LIST
-const menuCreditGroupsList = ":nth-child(8) > a";
+const menuCreditGroupsList = ":nth-child(9) > a";
 const CGLname = ".ant-input";
+const CGLbody = ".ant-card-body";
 const CGLcampus = ".ant-select-selection";
 const CGLview =
   "[data-row-key='0'] > :nth-child(3) > :nth-child(1) > :nth-child(1)";
+const CGLviewDrawer = ".ant-drawer-wrapper-body";
 const CGLedit =
   "[data-row-key='0'] > :nth-child(3) > :nth-child(1) > :nth-child(3)";
+const CGLeditDrawer = ".ant-drawer-body";
+const CGLeditName = "#name";
+const CGLeditCancel = ".ant-form-item-children > [type='button']";
+const CGLeditSave = ".ant-btn-primary";
 const CGLteamMembership =
   "[data-row-key='0'] > :nth-child(3) > :nth-child(1) > :nth-child(5)";
+const CGLteamMembershipSave =
+  ".ant-col-24 > .ant-row > .ant-col > .ant-form-item-control > .ant-form-item-children > .ant-btn-primary";
+const CGLteamMembershipCancel =
+  ".ant-col-24 > .ant-row > .ant-col > .ant-form-item-control > .ant-form-item-children > [type='button']";
+const CGLteamMembershipDrawer =
+  ":nth-child(8) > .ant-drawer > .ant-drawer-content-wrapper > .ant-drawer-content > .ant-drawer-wrapper-body";
 const CGLdownload =
   "[data-row-key='0'] > :nth-child(3) > :nth-child(1) > :nth-child(7)";
 const CGLpageNumberGroup = ".ant-pagination";
+const CGLpageNext = ".ant-pagination-next > .ant-pagination-item-link";
+const CGLpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 // CREDIT RULE ADD
-const menuCreditRuleAdd = ":nth-child(9) > a";
+const menuCreditRuleAdd = ":nth-child(10) > a";
 const CRAname = "#name";
 const CRAcampus =
   ":nth-child(3) > .ant-col-18 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
@@ -289,9 +315,10 @@ const CRAforEntirePeriodMealCreditUsed =
 const CRAcancel = ".ant-form-item-children > [type='button']";
 const CRAaddCreditRule = ".ant-btn-primary";
 // CREDIT RULES LIST
-const menuCreditRulesList = ":nth-child(10) > a";
+const menuCreditRulesList = ":nth-child(11) > a";
 const CRLname = ".ant-input";
 const CRLcampus = ".ant-select-selection";
+const CRLbody = ".ant-card-body";
 const CRLidTable =
   ":nth-child(1) > .ant-table-header-column > .ant-table-column-sorters";
 const CRLnameTable =
@@ -313,8 +340,10 @@ const CRLduplicate =
 const CRLactivate =
   "[data-row-key='0'] > :nth-child(7) > :nth-child(1) > :nth-child(7)";
 const CRLpageNumberGroup = ".ant-pagination";
+const CRLpageNext = ".ant-pagination-next > .ant-pagination-item-link";
+const CRLpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 // RECEIPTS
-const menuReceipts = "[id='menu2$Menu'] > :nth-child(11) > a";
+const menuReceipts = "[id='menu2$Menu'] > :nth-child(12) > a";
 const RsearchByUser = "#searchBy > :nth-child(1)";
 const RsearchByEmail = "#searchBy > :nth-child(2)";
 const RuserID =
@@ -354,6 +383,9 @@ export {
   RbtnSearch,
   menuCreditRulesList,
   CRLname,
+  CRLbody,
+  CRLpageNext,
+  CRLpagePrevious,
   CRLcampus,
   CRLidTable,
   CRLnameTable,
@@ -440,6 +472,17 @@ export {
   menuCreditGroupsList,
   CGLname,
   CGLcampus,
+  CGLbody,
+  CGLviewDrawer,
+  CGLeditDrawer,
+  CGLeditName,
+  CGLeditCancel,
+  CGLeditSave,
+  CGLteamMembershipSave,
+  CGLteamMembershipCancel,
+  CGLteamMembershipDrawer,
+  CGLpagePrevious,
+  CGLpageNext,
   CGLview,
   CGLedit,
   CGLteamMembership,
@@ -447,6 +490,12 @@ export {
   CGLpageNumberGroup,
   menuCreditGroupAdd,
   CGAaddTeam,
+  CGAbody,
+  CGAnameMsg,
+  CGAcampusMsg,
+  CGAcancelYes,
+  CGAcancelNo,
+  CGAconfirmation,
   CGAname,
   CGAcampus,
   CGAcancel,
@@ -457,6 +506,10 @@ export {
   TLeditDrawerBtn,
   TLeditDrawerMsg,
   TLdelete,
+  TLdeleteYes,
+  TLdeleteNo,
+  TLpageNext,
+  TLpagePrevious,
   TLpageNumberGroup,
   menuTeamAdd,
   TAname,
