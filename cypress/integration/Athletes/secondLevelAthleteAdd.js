@@ -70,7 +70,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.AAuser).should("be.empty");
     cy.get(variables.AAaddButton).click();
-    cy.get(variables.AAuserErrorMsg).should(
+    cy.get(variables.errorMsg(2)).should(
       "have.text",
       "Please input the user id!"
     );
@@ -123,6 +123,10 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.AAaddByEmail).click();
     cy.get(variables.AAemail).should("be.empty");
     cy.get(variables.AAaddButton).click();
+    cy.get(variables.errorMsg(2)).should(
+      "have.text",
+      "Please input the user id!"
+    );
   });
 
   it("Prueba Campus", function() {
@@ -174,7 +178,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.AAcampus).should("have.value", "");
     cy.get(variables.AAaddButton).click();
-    cy.get(variables.AAcampusErrorMsg).should(
+    cy.get(variables.errorMsg(3)).should(
       "have.text",
       "Please select the campus!"
     );
@@ -364,7 +368,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.AAaddButton).click();
-    cy.get(variables.AAuserErrorMsg).should(
+    cy.get(variables.errorMsg(1)).should(
       "have.text",
       "Please input the user id!"
     );

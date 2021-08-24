@@ -61,35 +61,35 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.ABbatchType1).should("be.visible");
+    cy.get(variables.ABbatchType(1)).should("be.visible");
   });
 
   it("Prueba Batch Type 2", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.ABbatchType2).should("be.visible");
+    cy.get(variables.ABbatchType(2)).should("be.visible");
   });
 
   it("Prueba Batch Type 3", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.ABbatchType3).should("be.visible");
+    cy.get(variables.ABbatchType(3)).should("be.visible");
   });
 
   it("Prueba Batch Type 4", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.ABbatchType4).should("be.visible");
+    cy.get(variables.ABbatchType(4)).should("be.visible");
   });
 
   it("Prueba Batch Type 5", function() {
     cy.get(variables.menuAthleteBatch)
       .should("be.visible")
       .click();
-    cy.get(variables.ABbatchType5).should("be.visible");
+    cy.get(variables.ABbatchType(5)).should("be.visible");
   });
 
   it("Prueba Warning", function() {

@@ -82,7 +82,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.ABCampus).should("have.value", "");
     cy.get(variables.ABaddAthlete).click();
-    cy.get(variables.ABCampusErrorMsg).should(
+    cy.get(variables.errorMsg(2)).should(
       "have.text",
       "Please select the campus!"
     );
@@ -130,7 +130,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.ABCampus).type(this.datos.testLetras);
     cy.get(variables.ABaddAthlete).click();
-    cy.get(variables.ABcreditGroupErrorMsg).should(
+    cy.get(variables.errorMsg(4)).should(
       "have.text",
       "Please select the Credit Group!"
     );

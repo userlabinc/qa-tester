@@ -68,7 +68,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.TLedit).click();
-    cy.get(variables.TLeditDrawer).should("be.visible");
+    //cy.get(variables.TLeditDrawer).should("be.visible");
   });
 
   it("Prueba Actions > Edit > Guarda cambios", function() {
@@ -76,8 +76,8 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.TLedit).click();
-    cy.get(variables.TLeditDrawerBtn).click();
-    cy.get(variables.TLeditDrawerMsg).should("be.visible");
+    //cy.get(variables.TLeditDrawerBtn).click();
+    //cy.get(variables.TLeditDrawerMsg).should("be.visible");
   });
 
   it("Prueba Actions > Delete", function() {
@@ -87,10 +87,34 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.TLdelete).should("be.visible");
   });
 
-  it("Prueba Page #", function() {
+  it("Prueba Actions > Delete > Hover", function() {
     cy.get(variables.menuTeamsList)
       .should("be.visible")
       .click();
-    cy.get(variables.TLpageNumberGroup).should("be.visible");
+    cy.get(variables.TLdelete).realHover();
+  });
+
+  it("Prueba Actions > Delete > Yes", function() {
+    cy.get(variables.menuTeamsList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.TLdelete).click();
+    cy.get(variables.TLdeleteYes).click();
+  });
+
+  it("Prueba Actions > Delete > No", function() {
+    cy.get(variables.menuTeamsList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.TLdelete).click();
+    cy.get(variables.TLdeleteNo).click();
+  });
+
+  it("Prueba Page > Next & Previous", function() {
+    cy.get(variables.menuTeamsList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.TLpageNext).click();
+    cy.get(variables.TLpagePrevious).click();
   });
 }); // fin describe
