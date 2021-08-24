@@ -54,7 +54,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.CGAaddTeam).click();
-    cy.get(variables.CGAcampusMsg).should(
+    cy.get(variables.errorMsg(1)).should(
       "have.text",
       "Please select the campus!"
     );
@@ -101,7 +101,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .should("be.visible")
       .click();
     cy.get(variables.CGAaddTeam).click();
-    cy.get(variables.CGAnameMsg).should(
+    cy.get(variables.errorMsg(2)).should(
       "have.text",
       "Please input the team name!"
     );

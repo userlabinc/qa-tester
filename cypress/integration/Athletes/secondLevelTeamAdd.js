@@ -55,7 +55,7 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
       .click();
     cy.get(variables.TAname).should("have.text", "");
     cy.get(variables.TAaddTag).click();
-    cy.get(variables.TAnameMsg).should("be.visible");
+    cy.get(variables.errorMsg3).should("be.visible");
   });
 
   it("Prueba Boton Team Add", function() {

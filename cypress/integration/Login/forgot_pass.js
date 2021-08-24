@@ -16,11 +16,11 @@ describe("Pruebas FORGOT PASSWORD", function() {
   it("Forgot password", function() {
     cy.get(variables.forgotpw).click();
     cy.get(variables.reg_email).type(this.datos.reg_email_er);
-    cy.get(variables.fp_ermsg).should(
+    cy.get(variables.errorMsg(1)).should(
       "have.text",
       "Please put your email and we will send you a verification code!"
     );
     cy.get(variables.loginbtn).click();
-    cy.get(variables.fp_ermsg2).should("be.visible");
+    cy.get(variables.errorMsg(2)).should("be.visible");
   });
 }); // fin DESCRIBE

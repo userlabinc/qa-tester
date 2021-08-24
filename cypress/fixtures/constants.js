@@ -1,12 +1,32 @@
+//Funcion para mensajes de error
+
+function errorMsg(num) {
+  const res =
+    ":nth-child(" +
+    num +
+    ") > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
+  return res;
+}
+
+function errorMsg2(num) {
+  const res =
+    ":nth-child(" +
+    num +
+    ") > .ant-col > .ant-form-item-control > .ant-form-explain";
+  return res;
+}
+
+function ABbatchType(num) {
+  const res = "#type > :nth-child(" + num + ")";
+  return res;
+}
+
+function errorMsg3() {
+  return ".ant-form-explain";
+}
+
 // LOGIN - FORGOT PASSWORD - REGISTER
-const user = "#username";
-const pass = "#password";
-const loginbtn = ".login-form-button";
 const loginer = ".ant-message-notice-content";
-const emp_user =
-  ":nth-child(1) > .ant-col > .ant-form-item-control > .ant-form-explain";
-const emp_pass =
-  ":nth-child(2) > .ant-col > .ant-form-item-control > .ant-form-explain";
 const forgotpw =
   ":nth-child(3) > .ant-col > .ant-form-item-control > .ant-form-item-children > :nth-child(1)";
 const fp_ermsg = ".login-text";
@@ -15,20 +35,11 @@ const confirmar_acc = ".ant-form-item-children > :nth-child(4)";
 const reg_name = "#name";
 const reg_email = "#email";
 const reg_pass = "#password";
-const reg_name_er =
-  ":nth-child(1) > .ant-col > .ant-form-item-control > .ant-form-explain";
-const reg_email_er =
-  ":nth-child(2) > .ant-col > .ant-form-item-control > .ant-form-explain";
-const reg_pass_er =
-  ":nth-child(3) > .ant-col > .ant-form-item-control > .ant-form-explain";
-const reg_pass_msg = ".ant-form-explain";
 const fp_ermsg2 = ".ant-message-notice-content";
 //
-const menu_prin = ".ant-layout-sider-children";
-const app_mgm =
+const menuAppsManagement =
   ".ant-layout-sider-children > .ant-menu > :nth-child(2) > .ant-menu-submenu-title";
-const ta_menubtn = "[id='menu1$Menu'] :nth-child(1) > a";
-const menuAthleteBatch = ":nth-child(2) > a";
+const menuTileAdd = "[id='menu1$Menu'] :nth-child(1) > a";
 const input = ".ant-input";
 const name = "#name";
 const sort_id =
@@ -53,11 +64,7 @@ const athlete_btn =
 const menuAthleteAdd = "[id='menu2$Menu'] :nth-child(1) > a";
 const AAbody = ".ant-card-body";
 const AAuser = ".ant-input";
-const AAuserErrorMsg =
-  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const AAemail = ".ant-input";
-const AAcampusErrorMsg =
-  ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const AAcreditGroup =
   ":nth-child(4) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
 const AArulesToApply =
@@ -72,37 +79,22 @@ const AArestrictedUntil = "#restrictedUntil > div > .ant-calendar-picker-input";
 const AAdateInput = ".ant-calendar-input";
 const AArestrictedAfter = "#restrictedAfter > div > .ant-calendar-picker-input";
 const AAcalendarYes = ".ant-popover-buttons > .ant-btn-primary";
-const ErrorGeneral = ".ant-form-explain";
-const AAerrorCampus =
-  ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
-const AAerrorUser =
-  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
-const AAerrorEmail =
-  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const AAisRestricted = ".ant-checkbox-inner";
 const AAaddBySelected = ".ant-radio-button-wrapper-checked";
 // ATHLETE BATCH
+const menuAthleteBatch = ":nth-child(2) > a";
 const ABpath = "/Users/userlab/Downloads";
 const ABbody = ".ant-card-body";
 const ABDownload =
   ".ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-btn";
 const ABCampus =
   ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
-const ABCampusErrorMsg =
-  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const ABTeam =
   ":nth-child(3) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
-const ABcreditGroupErrorMsg =
-  ":nth-child(4) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const ABisRestricted = ".ant-checkbox-inner";
 const ABrestrictedUntil = "#restrictedUntil > div > .ant-calendar-picker-input";
 const ABdateInput = ".ant-calendar-input";
 const ABrestrictedAfter = "#restrictedAfter > div > .ant-calendar-picker-input";
-const ABbatchType1 = "#type > :nth-child(1)";
-const ABbatchType2 = "#type > :nth-child(2)";
-const ABbatchType3 = "#type > :nth-child(3)";
-const ABbatchType4 = "#type > :nth-child(4)";
-const ABbatchType5 = "#type > :nth-child(5)";
 const ABbatchTypeMsg =
   ":nth-child(6) > .ant-col-20 > .ant-form-item-control > .ant-form-item-children > .ant-row > .ant-col > div";
 const ABbatchTypeSelect = ".ant-radio-button-wrapper-checked";
@@ -136,7 +128,6 @@ const ALpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 // TEAM ADD
 const menuTeamAdd = ":nth-child(6) > a";
 const TAname = "#name";
-const TAnameMsg = ".ant-form-explain";
 const TAaddTag = ".ant-btn-primary";
 const TAcancel = "[type='button']";
 const TAcancelYes = ".ant-popover-buttons > .ant-btn-primary";
@@ -160,11 +151,7 @@ const TLpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 const menuCreditGroupAdd = ":nth-child(8) > a";
 const CGAbody = ".ant-card-body";
 const CGAcampus = ".ant-select-selection";
-const CGAcampusMsg =
-  ":nth-child(1) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const CGAname = "#name";
-const CGAnameMsg =
-  ":nth-child(2) > .ant-col-20 > .ant-form-item-control > .ant-form-explain";
 const CGAcancel = "[type='button']";
 const CGAcancelYes = ".ant-popover-buttons > .ant-btn-primary";
 const CGAcancelNo = ".ant-popover-buttons > :nth-child(1)";
@@ -366,6 +353,11 @@ const Rteams =
 const RbtnSearch = ".ant-btn";
 
 export {
+  errorMsg,
+  errorMsg2,
+  errorMsg3,
+  menuAppsManagement,
+  menuTileAdd,
   menuReceipts,
   RsearchByUser,
   RsearchByEmail,
@@ -491,8 +483,6 @@ export {
   menuCreditGroupAdd,
   CGAaddTeam,
   CGAbody,
-  CGAnameMsg,
-  CGAcampusMsg,
   CGAcancelYes,
   CGAcancelNo,
   CGAconfirmation,
@@ -537,20 +527,11 @@ export {
   ABCancel,
   ABaddAthlete,
   ABUpload,
-  ABbatchType1,
-  ABbatchType2,
-  ABbatchType3,
-  ABbatchType4,
-  ABbatchType5,
+  ABbatchType,
   ABTeam,
   ABCampus,
   ABDownload,
-  user,
-  pass,
-  loginbtn,
   loginer,
-  emp_user,
-  emp_pass,
   forgotpw,
   fp_ermsg,
   fp_ermsg2,
@@ -559,13 +540,7 @@ export {
   reg_name,
   reg_email,
   reg_pass,
-  reg_name_er,
-  reg_email_er,
-  reg_pass_er,
   reg_pass_msg,
-  app_mgm,
-  ta_menubtn,
-  menu_prin,
   name,
   menuAthleteBatch,
   input,
@@ -594,21 +569,14 @@ export {
   AArestrictedAfter,
   AAcalendarYes,
   ErrorGeneral,
-  AAerrorCampus,
-  AAerrorUser,
-  AAerrorEmail,
   AAisRestricted,
-  AAuserErrorMsg,
-  AAcampusErrorMsg,
   AAcreditGroup,
   AArulesToApply,
   ABisRestricted,
   ABrestrictedUntil,
   ABrestrictedAfter,
   ABdateInput,
-  ABCampusErrorMsg,
   ABbody,
-  ABcreditGroupErrorMsg,
   ABcancelYes,
   ABpath,
   ABbatchTypeSelect,
