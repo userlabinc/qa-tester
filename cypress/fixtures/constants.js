@@ -323,10 +323,17 @@ const CRLview =
 const CRLedit =
   "[data-row-key='0'] > :nth-child(7) > :nth-child(1) > :nth-child(3)";
 const CRLduplicate =
-  "[data-row-key='0'] > :nth-child(7) > :nth-child(1) > :nth-child(5)";
+  "[data-row-key='3'] > :nth-child(7) > :nth-child(1) > :nth-child(5)";
 const CRLactivate =
   "[data-row-key='0'] > :nth-child(7) > :nth-child(1) > :nth-child(7)";
 const CRLpageNumberGroup = ".ant-pagination";
+const CRLviewBody = ".ant-drawer-header";
+const CRLeditSave = ".ant-btn-primary";
+const CRLeditCancel =
+  ".ant-col-24 > .ant-row > .ant-col > .ant-form-item-control > .ant-form-item-children > [type='button']";
+const CRLduplicateSave = ".ant-btn-primary";
+const CRLduplicateCancel =
+  ".ant-col-24 > .ant-row > .ant-col > .ant-form-item-control > .ant-form-item-children > [type='button']";
 const CRLpageNext = ".ant-pagination-next > .ant-pagination-item-link";
 const CRLpagePrevious = ".ant-pagination-prev > .ant-pagination-item-link";
 // RECEIPTS
@@ -337,6 +344,12 @@ const RuserID =
   ":nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-input";
 const Remail =
   ":nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
+const RuseremailMsg =
+  ":nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain";
+const RcampusMsg =
+  ":nth-child(7) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain";
+const RdateMsg =
+  ".ant-col-24 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain";
 const RfirstName = "#firstName";
 const Rcampuses =
   ":nth-child(7) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
@@ -351,6 +364,7 @@ const RlastName = "#lastName";
 const Rteams =
   ":nth-child(8) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-item-children > .ant-select > .ant-select-selection";
 const RbtnSearch = ".ant-btn";
+const Rbody = ".ant-card-body";
 
 export {
   errorMsg,
@@ -363,6 +377,10 @@ export {
   RsearchByEmail,
   RuserID,
   Remail,
+  RuseremailMsg,
+  RcampusMsg,
+  RdateMsg,
+  Rbody,
   RfirstName,
   Rcampuses,
   Rcreated,
@@ -390,6 +408,13 @@ export {
   CRLduplicate,
   CRLactivate,
   CRLpageNumberGroup,
+  CRLviewBody,
+  CRLeditSave,
+  CRLeditCancel,
+  CRLduplicateSave,
+  CRLduplicateCancel,
+  CRLpageNext,
+  CRLpagePrevious,
   menuCreditRuleAdd,
   CRAname,
   CRAcampus,
@@ -503,7 +528,6 @@ export {
   TLpageNumberGroup,
   menuTeamAdd,
   TAname,
-  TAnameMsg,
   TAaddTag,
   TAcancel,
   TAcancelYes,
@@ -540,7 +564,6 @@ export {
   reg_name,
   reg_email,
   reg_pass,
-  reg_pass_msg,
   name,
   menuAthleteBatch,
   input,
@@ -568,7 +591,6 @@ export {
   AAdateInput,
   AArestrictedAfter,
   AAcalendarYes,
-  ErrorGeneral,
   AAisRestricted,
   AAcreditGroup,
   AArulesToApply,

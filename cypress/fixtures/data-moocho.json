@@ -30,5 +30,6 @@
 "ABbatchType2Msg" : "If one or more athletes already exists on the team the process will stop and you will have to manually remove the athlete from the list and upload the file again.",
 "ABbatchType3Msg" : "If one or more athletes does not exist on the team the update process will stop and you will have to manually remove the athlete from the list and upload the file again.",
 "ABbatchType4Msg" : "The athletes will be deleted from the team. Be careful.",
-"ABbatchType5Msg" : "Only The Team Tag will be updated for the athletes in the list."
+"ABbatchType5Msg" : "Only The Team Tag will be updated for the athletes in the list.",
+"testDays" : "today{enter}"
 }
