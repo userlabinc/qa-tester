@@ -92,74 +92,151 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.CRLcampus).should("have.value", "");
   });
 
-  it("Prueba Table Sorter > ID", function() {
+  it("Prueba Table Sorter > ID > Hover", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLidTable).should("be.visible");
+    cy.get(variables.CRLidTable).realHover();
   });
 
-  it("Prueba Table Sorter > Name", function() {
+  it("Prueba Table Sorter > ID > Click", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLnameTable).should("be.visible");
+    cy.get(variables.CRLidTable).click();
   });
 
-  it("Prueba Table Sorter > Campus", function() {
+  it("Prueba Table Sorter > Name > Hover", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLcampusTable).should("be.visible");
+    cy.get(variables.CRLnameTable).realHover();
+  });
+  it("Prueba Table Sorter > Name > Click", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLnameTable).click();
   });
 
-  it("Prueba Table Sorter > All Teams", function() {
+  it("Prueba Table Sorter > Campus > Hover", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLallTeamsTable).should("be.visible");
+    cy.get(variables.CRLcampusTable).realHover();
   });
 
-  it("Prueba Table Sorter > Is Active", function() {
+  it("Prueba Table Sorter > Campus > Click", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLisActiveTable).should("be.visible");
+    cy.get(variables.CRLcampusTable).click();
   });
 
-  it("Prueba Table Sorter > Credit Type", function() {
+  it("Prueba Table Sorter > All Teams > Hover", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLcreditTypeTable).should("be.visible");
+    cy.get(variables.CRLallTeamsTable).realHover();
   });
 
-  it("Prueba Actions > View", function() {
+  it("Prueba Table Sorter > All Teams > Click", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLview).should("be.visible");
+    cy.get(variables.CRLallTeamsTable).click();
   });
 
-  it("Prueba Actions > Edit", function() {
+  it("Prueba Table Sorter > Is Active > Hover", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLedit).should("be.visible");
+    cy.get(variables.CRLisActiveTable).realHover();
   });
 
-  it("Prueba Actions > Duplicate", function() {
+  it("Prueba Table Sorter > Is Active > Click", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLduplicate).should("be.visible");
+    cy.get(variables.CRLisActiveTable).click();
   });
 
-  it("Prueba Actions > Activate / Inactivate", function() {
+  it("Prueba Table Sorter > Credit Type > Hover", function() {
     cy.get(variables.menuCreditRulesList)
       .should("be.visible")
       .click();
-    cy.get(variables.CRLactivate).should("be.visible");
+    cy.get(variables.CRLcreditTypeTable).realHover();
+  });
+
+  it("Prueba Table Sorter > Credit Type > Click", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLcreditTypeTable).click();
+  });
+
+  it("Prueba Actions > View > Hover", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLview).realHover();
+  });
+
+  it("Prueba Actions > View > Abre drawer", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLview).click();
+    cy.get(variables.CRLviewBody).should(
+      "have.text",
+      "Athlete Credit Rule Profile"
+    );
+  });
+
+  it("Prueba Actions > Edit > Hover", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLedit).realHover();
+  });
+
+  it("Prueba Actions > Edit > Click", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLedit).click();
+    cy.get(variables.CRLeditSave)
+      .scrollIntoView()
+      .should("be.visible");
+  });
+
+  it("Prueba Actions > Duplicate > Hover", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLduplicate).realHover();
+  });
+
+  it("Prueba Actions > Duplicate > Click", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLduplicate).click();
+    cy.get(variables.CRLduplicateSave).should("be.visible");
+  });
+
+  it("Prueba Actions > Activate / Inactivate > Hover", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLactivate).realHover();
+  });
+
+  it("Prueba Actions > Activate / Inactivate > Click", function() {
+    cy.get(variables.menuCreditRulesList)
+      .should("be.visible")
+      .click();
+    cy.get(variables.CRLactivate).click();
   });
 
   it("Prueba Page Number > Next", function() {

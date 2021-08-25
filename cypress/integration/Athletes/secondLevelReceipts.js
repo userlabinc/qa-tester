@@ -389,13 +389,3 @@ describe("Pruebas de primer nivel para seccion ATHLETES", function() {
     cy.get(variables.RbtnSearch).click();
   });
 }); // fin describe
-/*
-const RuseremailMsg = ":nth-child(3) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain";
-const RcampusMsg = ":nth-child(7) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain";
-const RdateMsg = ".ant-col-24 > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain";
-const Rbody = ".ant-card-body";
-
-
-RuseremailMsg,RcampusMsg,RdateMsg,
-Rbody,
-*/
